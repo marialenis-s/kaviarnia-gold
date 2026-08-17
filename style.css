@@ -1586,13 +1586,13 @@ footer p {
 
     .navigation {
         display: flex !important;
-        gap: 12px;
+        gap: 7px;
         align-items: center;
     }
 
     .navigation a {
         display: block !important;
-        font-size: 12px;
+        font-size: 10px;
         white-space: nowrap;
     }
 }
