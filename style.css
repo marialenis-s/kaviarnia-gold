@@ -1571,3 +1571,28 @@ footer p {
     }
 
 }
+
+@media (max-width: 800px) {
+    .header {
+        display: flex !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .navigation {
+        display: flex !important;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .navigation a {
+        display: block !important;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+}
