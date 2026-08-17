@@ -1,0 +1,1573 @@
+/* =========================================
+   ОСНОВНЫЕ НАСТРОЙКИ
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background-color: #f7f2e8;
+    color: #2b211b;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================================
+   ШАПКА
+========================================= */
+
+.header {
+    height: 80px;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: transparent;
+}
+
+
+.logo {
+    color: #e6c875;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+
+.navigation {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+.navigation a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: color 0.3s ease;
+}
+
+
+.navigation a:hover {
+    color: #e6c875;
+}
+
+
+/* =========================================
+   ГЛАВНЫЙ ЭКРАН
+========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    background-image: url("images/cafe.jpg.png");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        rgba(20, 12, 7, 0.35),
+        rgba(20, 12, 7, 0.65)
+    );
+}
+
+
+.hero-content {
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 850px;
+
+    padding: 30px;
+}
+
+
+.small-title {
+    margin: 0 0 25px;
+
+    color: #e6c875;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    letter-spacing: 5px;
+}
+
+
+.hero h1 {
+    margin: 0;
+
+    color: #e6c875;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(50px, 8vw, 82px);
+
+    font-weight: 400;
+
+    letter-spacing: -2px;
+
+    text-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+.subtitle {
+    margin: 25px 0 0;
+
+    color: white;
+
+    font-size: 20px;
+
+    letter-spacing: 0.5px;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================================
+   КНОПКА
+========================================= */
+
+.button {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 17px 36px;
+
+    background-color: #d6aa4c;
+
+    border: 1px solid #e6c875;
+
+    color: #241a12;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.button:hover {
+    background-color: #e6c875;
+
+    color: #241a12;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================
+   ОБЩИЕ СЕКЦИИ
+========================================= */
+
+section {
+    width: 100%;
+}
+
+
+.menu {
+    padding: 110px 7%;
+
+    background-color: #f7f2e8;
+}
+
+
+.menu-heading {
+    max-width: 700px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+
+.menu-heading h2 {
+    margin: 15px 0;
+
+    color: #8a641c;
+
+    font-family: Georgia, serif;
+
+    font-size: 48px;
+
+    font-weight: 400;
+}
+
+
+.menu-heading p:last-child {
+    color: #6d6259;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   ФИЛЬТРЫ МЕНЮ
+========================================= */
+
+.menu-filters {
+    max-width: 1100px;
+
+    margin: 0 auto 50px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+.filter-button {
+    padding: 12px 22px;
+
+    background: transparent;
+
+    border: 1px solid #cdbb9f;
+
+    color: #6d6259;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.filter-button:hover {
+    background-color: #eadcc8;
+
+    color: #5f4413;
+
+    transform: translateY(-2px);
+}
+
+
+.filter-button.active {
+    background-color: #8a641c;
+
+    border-color: #8a641c;
+
+    color: white;
+}
+
+
+/* =========================================
+   СЕТКА МЕНЮ
+========================================= */
+
+.menu-grid {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   КАРТОЧКА
+========================================= */
+
+.menu-card {
+    overflow: hidden;
+
+    background-color: #fffaf2;
+
+    border: 1px solid #e2d5c3;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.menu-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(60, 40, 20, 0.15);
+}
+
+
+/* Место под будущую фотографию */
+
+.menu-card-image {
+    height: 220px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background-color: #eadcc8;
+
+    font-size: 65px;
+}
+
+
+.menu-card-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Информация */
+
+.menu-card-content {
+    padding: 25px;
+}
+
+
+.menu-card-content h3 {
+    margin: 0 0 10px;
+
+    color: #5f4413;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    font-weight: 400;
+}
+
+
+.menu-card-content p {
+    margin: 0 0 20px;
+
+    color: #6d6259;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+.menu-card-content span {
+    color: #8a641c;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   ПРО НАС
+========================================= */
+
+.about {
+    min-height: 600px;
+
+    padding: 120px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #2b211b;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+.about-content {
+    max-width: 750px;
+}
+
+
+.about h2 {
+    margin: 15px 0 30px;
+
+    color: #e6c875;
+
+    font-family: Georgia, serif;
+
+    font-size: 48px;
+
+    font-weight: 400;
+}
+
+
+.about p:not(.small-title) {
+    color: #e8ded2;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+
+/* ========================================
+   ГАЛЕРЕЯ
+======================================== */
+
+.gallery {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 25px;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallery-small-title {
+    margin: 0 0 12px;
+
+    font-size: 12px;
+    letter-spacing: 3px;
+
+    color: #a27a56;
+}
+
+.gallery-header h2 {
+    margin: 0 0 15px;
+
+    font-family: Georgia, serif;
+    font-size: 48px;
+    font-weight: 500;
+
+    color: #4b3024;
+}
+
+.gallery-header > p:last-child {
+    margin: 0;
+
+    color: #806d60;
+}
+
+
+/* СЕТКА */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-auto-rows: 300px;
+
+    gap: 18px;
+}
+
+
+/* ФОТО */
+
+.gallery-item {
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #eee2d4;
+
+    box-shadow:
+        0 8px 25px rgba(70, 45, 30, 0.12);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* БОЛЬША КАРТИНКА */
+
+.gallery-large {
+    grid-row: span 2;
+}
+
+
+/* ШИРОКА КАРТИНКА */
+
+.gallery-wide {
+    grid-column: span 2;
+}
+
+
+/* ТЕЛЕФОН */
+
+@media (max-width: 700px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 280px;
+    }
+
+    .gallery-large {
+        grid-row: auto;
+    }
+
+    .gallery-wide {
+        grid-column: auto;
+    }
+
+    .gallery-header h2 {
+        font-size: 38px;
+    }
+}
+
+/* =========================================
+   КОНТАКТЫ
+========================================= */
+
+.contacts {
+    padding: 110px 7%;
+
+    background-color: #eadcc8;
+}
+
+
+.contacts-grid {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.contact-item {
+    padding: 35px;
+
+    background-color: #f7f2e8;
+
+    text-align: center;
+
+    border: 1px solid #d8c9b5;
+}
+
+
+.contact-item h3 {
+    margin-top: 0;
+
+    color: #8a641c;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    font-weight: 400;
+}
+
+
+.contact-item p {
+    color: #6d6259;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   МОДАЛЬНОЕ ОКНО
+========================================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(30, 20, 12, 0.7);
+
+    backdrop-filter: blur(5px);
+}
+
+
+.modal.show {
+    display: flex;
+}
+
+
+.modal-content {
+    position: relative;
+
+    width: min(500px, 100%);
+
+    overflow: hidden;
+
+    background-color: #f7f2e8;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.3);
+
+    animation:
+        modalOpen 0.3s ease;
+}
+
+
+.modal-close {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    z-index: 2;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    background-color: rgba(255, 255, 255, 0.85);
+
+    color: #2b211b;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+.modal-image {
+    height: 300px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background-color: #eadcc8;
+
+    font-size: 90px;
+}
+
+
+.modal-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.modal-info {
+    padding: 35px;
+}
+
+
+.modal-info h2 {
+    margin: 10px 0 15px;
+
+    color: #8a641c;
+
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+
+    font-weight: 400;
+}
+
+
+.modal-info p:not(.small-title) {
+    color: #6d6259;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+.modal-info span {
+    display: block;
+
+    margin-top: 25px;
+
+    color: #8a641c;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+
+@keyframes modalOpen {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 45px 7%;
+
+    background-color: #1d1510;
+
+    color: #bfb1a4;
+
+    text-align: center;
+}
+
+
+footer .logo {
+    margin-bottom: 15px;
+
+    color: #e6c875;
+}
+
+
+footer p {
+    margin: 8px 0;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   АДАПТАЦИЯ ПОД ПЛАНШЕТ
+========================================= */
+
+@media (max-width: 900px) {
+
+    .menu-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .contacts-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .navigation {
+        gap: 15px;
+    }
+
+}
+
+
+/* =========================================
+   АДАПТАЦИЯ ПОД ТЕЛЕФОН
+========================================= */
+
+@media (max-width: 650px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+
+    .logo {
+        font-size: 20px;
+    }
+
+
+    .navigation {
+        display: none;
+    }
+
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+
+    .subtitle {
+        font-size: 17px;
+    }
+
+
+    .menu,
+    .gallery,
+    .contacts {
+        padding: 80px 5%;
+    }
+
+
+    .menu-heading h2,
+    .about h2 {
+        font-size: 38px;
+    }
+
+
+    .menu-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .gallery-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .gallery-item {
+        height: 280px;
+    }
+
+
+    .menu-filters {
+        gap: 8px;
+    }
+
+
+    .filter-button {
+        padding: 10px 15px;
+
+        font-size: 13px;
+    }
+
+}
+#menu {
+    display: none;
+}
+
+#menu.show {
+    display: block;
+}
+/* ========================================
+   МЕНЮ — КАРТКИ БЛЮД
+======================================== */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+
+/* КАРТКА */
+
+.menu-card {
+    background: #fffaf4;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(70, 45, 30, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* НАВЕДЕННЯ */
+
+.menu-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(70, 45, 30, 0.18);
+}
+
+
+/* ФОТО */
+
+.menu-card-image {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    background: #eee2d4;
+}
+
+.menu-card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+/* ЗБІЛЬШЕННЯ ФОТО */
+
+.menu-card:hover .menu-card-image img {
+    transform: scale(1.06);
+}
+
+
+/* ТЕКСТ */
+
+.menu-card-content {
+    padding: 20px;
+}
+
+.menu-card-content h3 {
+    margin: 0 0 9px;
+
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    color: #4b3024;
+}
+
+.menu-card-content p {
+    margin: 0 0 18px;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    color: #806d60;
+}
+
+
+/* ЦІНА */
+
+.menu-card-content span {
+    display: inline-block;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    color: #9a6b3f;
+
+    padding-top: 3px;
+}
+
+
+/* ========================================
+   КАТЕГОРІЇ
+======================================== */
+
+.filter-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin: 25px auto 10px;
+
+    padding: 0 20px;
+}
+
+.filter-button {
+    border: 1px solid #c8a98b;
+
+    background: transparent;
+
+    color: #684a38;
+
+    padding: 10px 20px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.filter-button:hover {
+    transform: translateY(-2px);
+}
+
+.filter-button.active {
+    background: #684a38;
+
+    color: white;
+}
+
+
+/* ========================================
+   МОДАЛЬНЕ ВІКНО
+======================================== */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    background: rgba(35, 23, 17, 0.72);
+
+    backdrop-filter: blur(5px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+    z-index: 9999;
+}
+
+.modal.show {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* ВМІСТ */
+
+.modal-content {
+    position: relative;
+
+    width: min(900px, 100%);
+
+    max-height: 90vh;
+
+    overflow: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: #fffaf4;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35);
+
+    transform: translateY(20px) scale(0.97);
+
+    transition:
+        transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0) scale(1);
+}
+
+
+/* ФОТО В МОДАЛЦІ */
+
+.modal-image {
+    min-height: 400px;
+    background: #eadfd3;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 400px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ІНФОРМАЦІЯ */
+
+.modal-info {
+    padding: 55px 40px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.modal-info .small-title {
+    margin-bottom: 12px;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    color: #a27a56;
+}
+
+.modal-title {
+    margin: 0 0 18px;
+
+    font-family: Georgia, serif;
+
+    font-size: 36px;
+
+    line-height: 1.15;
+
+    color: #4b3024;
+}
+
+.modal-description {
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: #806d60;
+
+    margin-bottom: 25px;
+}
+
+.modal-price {
+    font-size: 24px;
+
+    font-weight: 700;
+
+    color: #9a6b3f;
+}
+
+
+/* КНОПКА ЗАКРИТТЯ */
+
+.modal-close {
+    position: absolute;
+
+    top: 15px;
+
+    right: 18px;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.9);
+
+    color: #4b3024;
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 2;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.modal-close:hover {
+    transform: rotate(90deg);
+
+    background: white;
+}
+
+
+/* ========================================
+   АДАПТАЦІЯ ПІД ТЕЛЕФОН
+======================================== */
+
+@media (max-width: 900px) {
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+    }
+
+    .modal-content {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-image {
+        height: 280px;
+        min-height: 280px;
+    }
+
+    .modal-image img {
+        min-height: 280px;
+    }
+
+    .modal-info {
+        padding: 30px;
+    }
+
+    .modal-title {
+        font-size: 30px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+
+        padding: 0 15px;
+    }
+
+    .menu-card-image {
+        height: 220px;
+    }
+
+    .filter-buttons {
+        gap: 7px;
+    }
+
+    .filter-button {
+        padding: 8px 15px;
+    }
+
+    .modal {
+        padding: 10px;
+    }
+
+    .modal-content {
+        max-height: 95vh;
+
+        border-radius: 18px;
+    }
+
+    .modal-image {
+        height: 230px;
+        min-height: 230px;
+    }
+
+    .modal-image img {
+        min-height: 230px;
+    }
+
+    .modal-info {
+        padding: 25px;
+    }
+
+    .modal-title {
+        font-size: 27px;
+    }
+}
+
+/* ========================================
+   ЗАГОЛОВОК МЕНЮ
+======================================== */
+
+.menu-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 35px;
+    padding: 20px;
+}
+
+.menu-small-title {
+    margin: 0 0 12px;
+
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 600;
+
+    color: #a27a56;
+}
+
+.menu-header h2 {
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(38px, 5vw, 58px);
+
+    font-weight: 500;
+
+    color: #4b3024;
+}
+
+.menu-subtitle {
+    margin: 14px 0 20px;
+
+    font-size: 16px;
+
+    color: #806d60;
+}
+
+.menu-decoration {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    color: #a27a56;
+
+    font-size: 15px;
+}
+
+.menu-decoration span {
+    display: block;
+
+    width: 70px;
+    height: 1px;
+
+    background: #c8a98b;
+}
+
+/* ========================================
+   ПРО НАС
+======================================== */
+
+.about {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+
+    align-items: center;
+}
+
+.about-image {
+    height: 550px;
+    overflow: hidden;
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(70, 45, 30, 0.15);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.04);
+}
+
+.about-content {
+    padding: 20px 0;
+}
+
+.about-small-title {
+    margin: 0 0 15px;
+
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 600;
+
+    color: #a27a56;
+}
+
+.about-content h2 {
+    margin: 0 0 25px;
+
+    font-family: Georgia, serif;
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: 1.15;
+    font-weight: 500;
+
+    color: #4b3024;
+}
+
+.about-content > p:not(.about-small-title):not(.about-signature) {
+    color: #806d60;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+.about-line {
+    width: 60px;
+    height: 2px;
+
+    margin: 30px 0 18px;
+
+    background: #a27a56;
+}
+
+.about-signature {
+    margin: 0;
+
+    font-family: Georgia, serif;
+    font-style: italic;
+
+    color: #684a38;
+    font-size: 18px;
+}
+
+
+/* ========================================
+   МОБІЛЬНА ВЕРСІЯ
+======================================== */
+
+@media (max-width: 800px) {
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 35px;
+
+        margin: 70px auto;
+    }
+
+    .about-image {
+        height: 380px;
+    }
+
+    .about-content {
+        padding: 0;
+    }
+
+}

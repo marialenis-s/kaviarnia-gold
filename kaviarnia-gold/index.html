@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Кавʼярня Ґолд</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ШАПКА
+    ========================== -->
+
+    <header class="header">
+
+        <nav class="navigation">
+
+            <a href="#">Головна</a>
+
+            <a href="#menu">
+                Меню
+            </a>
+
+            <a href="#about">
+                Про нас
+            </a>
+
+            <a href="#gallery">
+                Галерея
+            </a>
+
+            <a href="#contacts">
+                Контакти
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             ГОЛОВНИЙ ЕКРАН
+        ========================== -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="small-title">
+                    КАВʼЯРНЯ · КАВА · ДЕСЕРТИ
+                </p>
+
+                <h1>
+                    Кавʼярня Ґолд
+                </h1>
+
+                <p class="subtitle">
+                    Кава. Десерти. Трохи часу для себе.
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             МЕНЮ
+        ========================== -->
+
+        <section class="menu" id="menu">
+
+            <div class="menu-header">
+
+                <p class="menu-small-title">
+                    КАВА • СНІДАНКИ • ДЕСЕРТИ
+                </p>
+
+                <h2>
+                    Наше меню
+                </h2>
+
+                <p class="menu-subtitle">
+                    Обирай те, що зробить твій день трохи смачнішим
+                </p>
+
+                <div class="menu-decoration">
+                    <span></span>
+                    ✦
+                    <span></span>
+                </div>
+
+            </div>
+
+
+            <div class="menu-heading">
+
+                <p class="small-title">
+                    НАШЕ МЕНЮ
+                </p>
+
+                <h2>
+                    Щось смачне до кави
+                </h2>
+
+                <p>
+                    Обери свій улюблений напій,
+                    сніданок або десерт.
+                </p>
+
+            </div>
+
+
+            <!-- КАТЕГОРІЇ -->
+
+            <div class="menu-filters">
+
+                <button
+                    class="filter-button active"
+                    data-category="all"
+                >
+                    Усе
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="drinks"
+                >
+                    Напої
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="breakfast"
+                >
+                    Сніданки
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="toast"
+                >
+                    Тости
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="salads"
+                >
+                    Салати
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="soups"
+                >
+                    Супи
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="pasta"
+                >
+                    Паста
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="sandwiches"
+                >
+                    Сендвічі
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="desserts"
+                >
+                    Десерти
+                </button>
+
+            </div>
+
+
+            <!-- СЮДА JAVASCRIPT ДОБАВЛЯЄ СТРАВИ -->
+
+            <div
+                class="menu-grid"
+                id="menuGrid"
+            >
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ПРО НАС
+        ========================== -->
+
+        <section class="about" id="about">
+
+            <div class="about-image">
+
+                <img
+                    src="images/pro-nas.png"
+                    alt="Кав'ярня Ґолд"
+                >
+
+            </div>
+
+
+            <div class="about-content">
+
+                <p class="about-small-title">
+                    ПРО НАС
+                </p>
+
+                <h2>
+                    Місце, куди хочеться повертатися
+                </h2>
+
+                <p>
+                    Кав'ярня Ґолд — це місце для ранкової кави,
+                    неспішних розмов та маленьких моментів,
+                    які роблять звичайний день особливим.
+                </p>
+
+                <p>
+                    Ми поєднали затишну атмосферу, якісну каву
+                    та улюблені страви, щоб кожен гість міг
+                    відчути себе тут як удома.
+                </p>
+
+                <div class="about-line"></div>
+
+                <p class="about-signature">
+                    З любов'ю, Ґолд ☕
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ГАЛЕРЕЯ
+        ========================== -->
+
+        <section
+            class="gallery"
+            id="gallery"
+        >
+
+            <div class="gallery-header">
+
+                <p class="gallery-small-title">
+                    НАША АТМОСФЕРА
+                </p>
+
+                <h2>
+                    Галерея
+                </h2>
+
+                <p>
+                    Трохи більше про місце, де народжується
+                    гарний настрій.
+                </p>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item gallery-large">
+
+                    <img
+                        src="images/gallery_menu_board.jpg"
+                        alt="Меню кав'ярні Ґолд"
+                    >
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="images/gallery_gold_book.jpg"
+                        alt="Книга кав'ярні Ґолд"
+                    >
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="images/gallery_sofa.jpg"
+                        alt="Затишний диван у кав'ярні"
+                    >
+
+                </div>
+
+
+                <div class="gallery-item gallery-wide">
+
+                    <img
+                        src="images/gallery_tables.jpg"
+                        alt="Столи кав'ярні Ґолд"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             КОНТАКТИ
+        ========================== -->
+<!-- =========================
+     КОНТАКТИ
+========================= -->
+
+<section
+    class="contacts"
+    id="contacts"
+>
+
+    <div class="menu-heading">
+
+        <p class="small-title">
+            ЗАВІТАЙТЕ ДО НАС
+        </p>
+
+        <h2>
+            Будемо раді бачити
+        </h2>
+
+    </div>
+
+
+    <div class="contacts-grid">
+
+        <div class="contact-item">
+
+            <h3>
+                Адреса
+            </h3>
+
+            <p>
+                вулиця Соборності, 6
+                <br>
+                Полтава, Полтавська область, 36000
+            </p>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <h3>
+                Графік
+            </h3>
+
+            <p>
+                Пн–Нд
+                <br>
+                08:00 — 21:30
+            </p>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <h3>
+                Телефон
+            </h3>
+
+            <p>
+                066 000 00 00
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="logo">
+            ҐОЛД
+        </div>
+
+        <p>
+            Кава. Десерти. Трохи часу для себе.
+        </p>
+
+        <p>
+            © 2026 Кавʼярня Ґолд
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
